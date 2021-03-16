@@ -5,8 +5,10 @@ def exponent(x:float):
     intX=x
     result=float(1)
     factorial=int(1)
-    while(intX>p-200):
+    c=0
+    while(c<100):
         factorial= factorial * p
+        c=c+1
         p=p+1
         result= result+ x/factorial
         x=x*intX
@@ -18,7 +20,7 @@ def exponent(x:float):
   
 def ln(x:float):
     if (x<=0):
-        return print('wrong input')
+        return 0
     
     elif(x>0 and x<1):
         y=float(0)
@@ -54,7 +56,7 @@ def XtimesY(x:float,y:float):
         
 def sqrt(x:float,y:float):
     if(y<0):
-        return print('wrong input')
+        return 0
     else:
         return XtimesY(y, 1/x)
 
@@ -67,5 +69,7 @@ def calculate(x:float) :
         return num 
 
 
-a=float(input('enter a number:',))  
-print(calculate(a))
+print(sqrt(-1,-2))
+#a=float(input('enter a number:',))  
+#print(calculate(a))
+
