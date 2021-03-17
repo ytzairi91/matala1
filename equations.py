@@ -44,7 +44,10 @@ def XtimesY(x:float,y:float):
         return 0
     elif (y==1):
         return x
-    
+    elif(x<0 and y%2==0):
+        return float(exponent(y*ln(-x)))
+    elif(x<0 and y%2!=0):
+        return float(-exponent(y*ln(-x)))
     else:
         return float(exponent(y*ln(x)))
      
@@ -65,7 +68,7 @@ def calculate(x:float) :
         return float(num)
 
 
-
-a=float(input('enter a number:',))  
-print(calculate(a))
+print(XtimesY(-2,4))
+#a=float(input('enter a number:',))  
+#print(calculate(a))
 
