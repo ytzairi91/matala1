@@ -42,8 +42,6 @@ def Ln(x:float):
 def XtimesY(x:float,y:float):
     if(x==0):
         return float(0)
-    elif(y<=0):
-        return float(0)
     elif (y==1):
         return x
     elif(x<0):
@@ -66,7 +64,3 @@ def calculate(x:float) :
     else:
         num= exponent(x) * XtimesY(7, x) * XtimesY(x,-1) * sqrt(x,x)
         return float(num)
-
-
-
-    
