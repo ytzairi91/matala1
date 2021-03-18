@@ -68,7 +68,4 @@ def calculate(x:float) :
         return float(num)
 
 
-print(XtimesY(-2,4))
-#a=float(input('enter a number:',))  
-#print(calculate(a))
 
