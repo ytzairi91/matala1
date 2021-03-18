@@ -16,9 +16,9 @@ def exponent(x:float):
     return a
 
 
-def ln(x:float):
+def Ln(x:float):
     if (x<=0): 
-        return 0  
+        return float(0)  
     elif(x>0 and x<1):
         y=float(0)
         b=0
@@ -41,31 +41,32 @@ def ln(x:float):
 
 def XtimesY(x:float,y:float):
     if(x==0):
-        return 0
+        return float(0)
+    elif(y<=0):
+        return float(0)
     elif (y==1):
         return x
-    elif(x<0 and y%2==0):
-        return float(exponent(y*ln(-x)))
-    elif(x<0 and y%2!=0):
-        return float(-exponent(y*ln(-x)))
+    elif(x<0):
+        return float(0)
     else:
-        return float(exponent(y*ln(x)))
+        return float(exponent(y*Ln(x)))
      
         
         
 def sqrt(x:float,y:float):
-    if(y<0):
-        return 0
+    if(y<=0):
+        return float(0)
     else:
         return float(XtimesY(y, 1/x))
 
 
 def calculate(x:float) :
     if(x<=0):
-        return 0
+        return float(0)
     else:
         num= exponent(x) * XtimesY(7, x) * XtimesY(x,-1) * sqrt(x,x)
         return float(num)
 
 
 
+    
